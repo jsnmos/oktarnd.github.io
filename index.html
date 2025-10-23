@@ -6,6 +6,135 @@
     <title>Document</title>
 </head>
 <body>
-    <p>Hello</p>
+    <div class="background"></div>
+    
+    <header>
+    <div class="logo">My Logo</div>
+    </header>
+    
+    <main>
+    <div class="content">
+      <div class="left"></div>
+      <div class="right">
+        <button>버튼 1</button>
+        <button>버튼 2</button>
+        <button>버튼 3</button>
+        <button>버튼 4</button>
+      </div>
+    </div>
+    </main>
+    
+    <footer>
+    <p>📞 문의: example@email.com | ☎ 010-1234-5678</p>
+    </footer>
+    <style>
+        /* 기본 설정 */
+        * {
+          margin: 0;
+          padding: 0;
+          box-sizing: border-box;
+        }
+        
+        body {
+          font-family: 'Noto Sans KR', sans-serif;
+          color: white;
+          height: 100vh;
+          overflow: hidden;
+          position: relative;
+        }
+        
+        /* 배경 이미지 */
+        .background {
+          position: fixed;
+          top: 0; left: 0;
+          width: 100%; height: 100%;
+          background-image: url('background.jpg'); /* 원하는 배경 이미지 경로 */
+          background-size: cover;
+          background-position: center;
+          filter: brightness(0.6);
+          z-index: -1;
+        }
+        
+        /* 헤더 */
+        header {
+          display: flex;
+          align-items: center;
+          height: 80px;
+          padding: 0 40px;
+          background: rgba(0, 0, 0, 0.4);
+        }
+        
+        .logo {
+          font-size: 1.5rem;
+          font-weight: bold;
+        }
+        
+        /* 메인 콘텐츠 */
+        main {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          height: calc(100vh - 160px); /* 헤더+푸터 제외 높이 */
+        }
+        
+        .content {
+          display: flex;
+          width: 80%;
+          max-width: 1000px;
+        }
+        
+        .left {
+          flex: 1;
+        }
+        
+        .right {
+          flex: 1;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: flex-start;
+          gap: 15px;
+        }
+        
+        /* 버튼 스타일 */
+        button {
+          background-color: rgba(255, 255, 255, 0.8);
+          color: #222;
+          border: none;
+          padding: 12px 24px;
+          border-radius: 8px;
+          cursor: pointer;
+          font-size: 1rem;
+          transition: all 0.3s;
+        }
+        
+        button:hover {
+          background-color: #ffffff;
+          transform: translateX(5px);
+        }
+        
+        /* 푸터 */
+        footer {
+          height: 80px;
+          background: rgba(0, 0, 0, 0.4);
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          font-size: 0.9rem;
+        }
+        
+        /* 반응형 */
+        @media (max-width: 768px) {
+          .content {
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+          }
+          .right {
+            align-items: center;
+          }
+        }
+    </style>
 </body>
+
 </html>
