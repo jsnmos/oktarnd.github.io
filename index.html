@@ -6,27 +6,25 @@
     <title>Document</title>
 </head>
 <body>
-    <div class="background"></div>
-    
-    <header>
-    <div class="logo">My Logo</div>
-    </header>
-    
-    <main>
-    <div class="content">
-      <div class="left"></div>
-      <div class="right">
-        <button>버튼 1</button>
-        <button>버튼 2</button>
-        <button>버튼 3</button>
-        <button>버튼 4</button>
-      </div>
+    <div class="wrap">
+        <header>
+            <div class="logo">My Logo</div>
+        </header>
+        
+        <div class="content">
+            <div class="left"></div>
+            <div class="right">
+            <button>버튼 1</button>
+            <button>버튼 2</button>
+            <button>버튼 3</button>
+            <button>버튼 4</button>
+            </div>
+        </div>
+
+        <footer>
+            <p>📞 문의: example@email.com | ☎ 010-1234-5678</p>
+        </footer>
     </div>
-    </main>
-    
-    <footer>
-    <p>📞 문의: example@email.com | ☎ 010-1234-5678</p>
-    </footer>
     <style>
         /* 기본 설정 */
         * {
@@ -44,11 +42,11 @@
         }
         
         /* 배경 이미지 */
-        .background {
+        .wrap {
           position: fixed;
           top: 0; left: 0;
           width: 100%; height: 100%;
-          background-image: url('background.jpg'); /* 원하는 배경 이미지 경로 */
+          background-image: url('/img/main01.png'); /* 원하는 배경 이미지 경로 */
           background-size: cover;
           background-position: center;
           filter: brightness(0.6);
@@ -138,3 +136,4 @@
 </body>
 
 </html>
+
