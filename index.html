@@ -36,7 +36,6 @@
         body {
           font-family: 'Noto Sans KR', sans-serif;
           color: white;
-          height: 100vh;
           overflow: hidden;
           position: relative;
         }
@@ -45,12 +44,16 @@
         .wrap {
           position: fixed;
           top: 0; left: 0;
-          width: 100%; height: 100%;
+          width: 100%; 
+          height: 100vh;
           background-image: url('https://jsnmos.github.io/oktarnd.github.io/img/main01.png');
           background-size: cover;
           background-position: center;
           filter: brightness(0.6);
           z-index: -1;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
         }
         
         /* 헤더 */
@@ -77,8 +80,8 @@
         
         .content {
           display: flex;
-          width: 80%;
-          max-width: 1000px;
+          width: 100%;
+          height: 100%;
         }
         
         .left {
@@ -90,7 +93,7 @@
           display: flex;
           flex-direction: column;
           justify-content: center;
-          align-items: flex-start;
+          align-items: center;
           gap: 15px;
         }
         
@@ -99,7 +102,7 @@
           background-color: rgba(255, 255, 255, 0.8);
           color: #222;
           border: none;
-          padding: 12px 24px;
+          padding: 12px 185px;
           border-radius: 8px;
           cursor: pointer;
           font-size: 1rem;
@@ -136,5 +139,6 @@
 </body>
 
 </html>
+
 
 
